@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutButtons"
+        android:layout_margin="16dp"
+        android:hint="@string/zero"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="64sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fiveLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clearError"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/light_pink"
+                android:text="@string/clear_error"
+                android:textColor="@color/dark_pink"
+                android:textSize="20sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/light_pink"
+                android:text="@string/clear"
+                android:textColor="@color/dark_pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:onClick="clearOperation"/>
+
+            <Button
+                android:id="@+id/deleteButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/light_pink"
+                android:text="@string/delete"
+                android:textColor="@color/dark_pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/divisionButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/pink"
+                android:onClick="buttonClicked"
+                android:tag="@string/division_tag"
+                android:text="@string/division"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sevenButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/seven"
+                android:text="@string/seven"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/eightButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/eight"
+                android:text="@string/eight"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/nineButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/nine"
+                android:text="@string/nine"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/multiplyButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/pink"
+                android:onClick="buttonClicked"
+                android:tag="@string/multiply_tag"
+                android:text="@string/multiply"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/threeLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fourButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/four"
+                android:text="@string/four"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/fiveButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/five"
+                android:text="@string/five"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/sixButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/six"
+                android:text="@string/six"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/minusButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/pink"
+                android:onClick="buttonClicked"
+                android:tag="@string/minus_tag"
+                android:text="@string/minus"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/twoLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/oneButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/one"
+                android:text="@string/one"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/twoButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/two"
+                android:text="@string/two"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/ThreeButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/three"
+                android:text="@string/three"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/plusButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/pink"
+                android:onClick="buttonClicked"
+                android:tag="@string/plus_tag"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oneLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/operationButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/pink"
+                android:text="@string/operator"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/zeroButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:onClick="buttonClicked"
+                android:tag="@string/zero"
+                android:text="@string/zero"
+                android:textColor="@color/pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:id="@+id/commaButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/light_pink"
+                android:onClick="buttonClicked"
+                android:tag="@string/comma"
+                android:text="@string/comma"
+                android:textColor="@color/dark_pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/equalButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/dark_pink"
+                android:onClick="showResult"
+                android:text="@string/equal"
+                android:textColor="@color/light_pink"
+                android:textSize="32sp"
+                app:cornerRadius="36dp"
+                android:enabled="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
